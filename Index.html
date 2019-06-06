@@ -14,7 +14,7 @@
     <style>
         body {
             min-height: 2000px;
-            padding-top: 70px;
+            padding-top: 50px;
             background-color: #070915;
             color: #fff;
         }
@@ -57,10 +57,32 @@
             height: 200px;
         }
 
-        #s9>.container {
+        #s10>.container {
             background: no-repeat url("https://source.unsplash.com/random/1366x800") center;
             background-size: cover;
             height: 600px;
+        }
+
+        #s11 .embed-responsive {
+            border-radius: 15px;
+        }
+
+        .tInstallment {}
+
+        .tInstallmentProcess {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 30px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        .tInstallmentProcess li {
+            list-style-image: url("https://source.unsplash.com/random/10x10")
+        }
+
+        .tInstallmentProcess>li:first-child {
+            list-style: none;
         }
 
         /* Promo box */
@@ -86,8 +108,6 @@
         .tFeatureBox {
             background-color: #131b3f;
             text-align: center;
-            /* position: relative;
-            width: 50%; */
         }
 
         .tFeatureBoxImage {
@@ -109,7 +129,7 @@
 
         .divider {
             position: relative;
-            margin-top: 90px;
+            margin-top: 10px;
             height: 1px;
         }
 
@@ -119,7 +139,7 @@
             top: 0;
             left: 5%;
             right: 5%;
-            width: 90%;
+            width: 95%;
             height: 2px;
             background-image: linear-gradient(to right, transparent, #fe0000, transparent);
         }
@@ -142,8 +162,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" class="text-uppercase">hotline: 0909 20 26 99</a></li>
-                    <li><a href="#" class="text-uppercase">nhận tư vấn ngay</a></li>
+                    <li><a href="#">HOTLINE: 0909 20 26 99</a></li>
+                    <li><a href="#">NHẬN TƯ VẤN NGAY</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -380,7 +400,7 @@
             </div>
         </div>
     </section>
-    <section class="" id="s8">
+    <section class="" id="s9">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -395,16 +415,17 @@
             </div>
         </div>
     </section>
-    <section class="" id="s9">
+    <section class="" id="s10">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center">
+                <div class="col-md-8 col-md-offset-2 text-center">
                     <div class="gapSolidBig"></div>
                     <h1>HỆ THỐNG KHUNG SƯỜN</h1>
                     <p><strong>Khung sườn xe được làm từ thép chất lượng cao, mang lại sự cứng cáp, bền bỉ</strong></p>
+                    <div class="divider div-transparent"></div>
                 </div>
             </div>
-            <div class="divider div-transparent"></div>
+            
             <div class="row">
                 <div class="col-md-12 text-center ">
                     <h2>CHÍNH SÁCH BẢO HÀNH</h2>
@@ -413,7 +434,7 @@
             </div>
         </div>
     </section>
-    <section class="" id="s10">
+    <section class="" id="s11">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -422,34 +443,35 @@
                             Phước</strong></p>
                 </div>
                 <div class="col-md-8 col-md-offset-2">
-                    <form>
-                        <div class="form-group col-md-6">
-                            <label for="ipPrice">Giá xe:</label>
-                            <input type="text" class="form-control" id="ipPrice" placeholder="Nhập giá xe VNĐ">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="ipPrice">Lãi suất (% tháng):</label>
-                            <input type="text" class="form-control" id="ipInterestRate" placeholder="1.25">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="ipPrice">Số tiền trả trước (VNĐ):</label>
-                            <input type="number" class="form-control" id="ipPrepaid"
-                                placeholder="Số tiền trả trước (VNĐ) tối thiểu 30% giá xe">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="ipPrice">Thời hạn vay:</label>
-                            <input type="number" class="form-control" id="ipTenor" placeholder="Chọn thời hạn vay">
-                        </div>
-                        <div class="col-md-12 text-center">
-                            <button type="button" class="btn btn-default">TÍNH TIỀN</button>
-                        </div>
-                    </form>
-
+                    <div class="row">
+                        <form>
+                            <div class="form-group col-md-6">
+                                <label for="ipPrice">Giá xe:</label>
+                                <input type="text" class="form-control" id="ipPrice" placeholder="Nhập giá xe VNĐ">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="ipPrice">Lãi suất (% tháng):</label>
+                                <input type="text" class="form-control" id="ipInterestRate" placeholder="1.25">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="ipPrice">Số tiền trả trước (VNĐ):</label>
+                                <input type="number" class="form-control" id="ipPrepaid"
+                                    placeholder="Số tiền trả trước (VNĐ) tối thiểu 30% giá xe">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="ipPrice">Thời hạn vay:</label>
+                                <input type="number" class="form-control" id="ipTenor" placeholder="Chọn thời hạn vay">
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button type="button" class="btn btn-default">TÍNH TIỀN</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <ul>
+                <div class="col-md-8 col-md-offset-2 tInstallment">
+                    <ul class="tInstallmentProcess">
                         <li>
                             <h4>QUY TRÌNH VAY MUA XE TẢI TRẢ GÓP</h4>
                         </li>
@@ -480,13 +502,54 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=qruB-daAwlk"></iframe>
+                        <iframe width="1349" height="495" src="https://www.youtube.com/embed/7oSOVY9Cl48"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <iframe width="1349" height="495" src="https://www.youtube.com/embed/7oSOVY9Cl48"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                     <p>Xem ngay Video trải nghiệm Siam Truck</p>
                 </div>
             </div>
         </div>
     </section>
+    <div class="divider div-transparent" style="margin-top: 0;"></div>
+    <section id="s12">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>THỜI GIAN KHUYẾN MÃI CÒN</h3>
+                    <div style="width: 100%; height: 90px"></div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <p>
+                        <strong>CHỈ DUY NHẤT HÔM NAY,</strong>
+                        <br>
+                        Sở hữu ô tô Siam Truck
+                        <br>
+                        Với mức giá <span>ƯU ĐÃI</span>
+                        <br>
+                        <button type="button" class="btn btn-default">GỌI NGAY ĐỂ ĐƯỢC HỖ TRỢ</button>
+                    </p>
+                </div>
+                <div class="col-md-6  text-center">Mã QR</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">HOTLINE: 0909 20 26 99</div>
+                <div class="col-md-8 text-center">
+                    <p>ababaxx <br> aasaskcmaoscasocasmocmasocamosckmaoskcmaoscmsokamc</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
