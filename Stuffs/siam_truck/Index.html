@@ -109,11 +109,7 @@
         </div>
     </section>
     <section class="" id="s4">
-        <div class="container">
-
-        </div>
-    </section>
-    <section class="" id="s5">
+        <div class="container" id="tSiam"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-6">
@@ -196,6 +192,7 @@
             </div>
         </div>
     </section>
+    <!-- <section class="" id="s5"></section> -->
     <section class="" id="s6">
         <div class="container">
             <div class="row">
@@ -209,20 +206,11 @@
     <section class="" id="s7">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center">
-                    <img src="assets/truck1.jpg" class="img-responsive" alt="Image">
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="assets/truck2.jpg" class="img-responsive" alt="Image" style="padding-top: 40px;">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="" id="s8">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="media tFeatureMedia">
+                <div class="col-md-6 tAbilityBox">
+                    <div class="text-center tAbilityBoxImage">
+                        <img src="assets/truck1.jpg" class="img-responsive" alt="Image">
+                    </div>
+                    <div class="media tAbilityBoxMedia">
                         <div class="media-left">
                             <a href="#">
                                 <img class="media-object" src="assets/flag.png" alt="thailand-flag">
@@ -235,8 +223,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="media tFeatureMedia">
+                <div class="col-md-6 tAbilityBox">
+                    <div class="text-center tAbilityBoxImage">
+                        <img src="assets/truck2.jpg" class="img-responsive" alt="Image" style="padding-top: 40px;">
+                    </div>
+                    <div class="media tAbilityBoxMedia">
                         <div class="media-left">
                             <a href="#  ">
                                 <img class="media-object" src="assets/flag.png" alt="thailand-flag">
@@ -250,53 +241,48 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="" id="s9">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="https://source.unsplash.com/random/400x280" class="img-responsive" alt="Image">
+            <div class="row tPromoRow">
+                <div class="col-md-4 tPromo">
+                    <img src="assets/promo4.jpg" class="img-responsive" alt="Image">
                 </div>
-                <div class="col-md-4">
-                    <img src="https://source.unsplash.com/random/400x280" class="img-responsive" alt="Image">
+                <div class="col-md-4 tPromo">
+                    <img src="assets/promo5.jpg" class="img-responsive" alt="Image">
                 </div>
-                <div class="col-md-4">
-                    <img src="https://source.unsplash.com/random/400x280" class="img-responsive" alt="Image">
+                <div class="col-md-4 tPromo">
+                    <img src="assets/promo6.jpg" class="img-responsive" alt="Image">
                 </div>
             </div>
         </div>
     </section>
-    <section class="" id="s10">
+    <section class="" id="s8">
         <div class="container">
-            <div class="row">
+            <div class="row tFrameSystem">
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <div class="gapSolidBig"></div>
-                    <h1>HỆ THỐNG KHUNG SƯỜN</h1>
-                    <p><strong>Khung sườn xe được làm từ thép chất lượng cao, mang lại sự cứng cáp, bền bỉ</strong></p>
-                    <div class="divider div-transparent"></div>
+                    <h1 class="tTitle">HỆ THỐNG KHUNG SƯỜN</h1>
+                    <p class="tParagraph"><strong>Khung sườn xe được làm từ thép chất lượng cao, mang lại sự cứng cáp, bền bỉ</strong></p>
+                    <div class="divider div-transparent" style="margin-top: 35px; margin-bottom: 35px"></div>
                 </div>
             </div>
-
-            <div class="row">
+            <div class="row tWarrantyPolicy">
                 <div class="col-md-12 text-center ">
-                    <h2>CHÍNH SÁCH BẢO HÀNH</h2>
-                    <p><strong>Siam Truck được bảo hành 3 nam cho 50,000 km đầu tiên</strong></p>
+                    <img src="assets/guarantee.jpg" class="img-responsive" alt="Image" style="width: 100%;height: auto;">
                 </div>
             </div>
         </div>
     </section>
+    <!-- <section class="" id="s9"></section> -->
     <section class="" id="s11">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1>CHÍNH SÁCH TRẢ GÓP KHI MUA HÀNG</h1>
-                    <p><strong>Điền vào bảng dưới đây để dự toán chi phí mua xe Siam Truck trả góp từ Công ty Ô tô An
+                    <h1 class="tTitle">CHÍNH SÁCH TRẢ GÓP KHI MUA HÀNG</h1>
+                    <p class="tParagraph"><strong>Điền vào bảng dưới đây để dự toán chi phí mua xe Siam Truck trả góp từ Công ty Ô tô An
                             Phước</strong></p>
                 </div>
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
-                        <form>
+                        <form id="tCalculator">
                             <div class="form-group col-md-6">
                                 <label for="ipPrice">Giá xe:</label>
                                 <input type="text" class="form-control" id="ipPrice" placeholder="Nhập giá xe VNĐ">
@@ -315,7 +301,7 @@
                                 <input type="number" class="form-control" id="ipTenor" placeholder="Chọn thời hạn vay">
                             </div>
                             <div class="col-md-12 text-center">
-                                <button type="button" class="btn btn-default">TÍNH TIỀN</button>
+                                <button type="button" class="btn btn-light-red">TÍNH TIỀN</button>
                             </div>
                         </form>
                     </div>
@@ -327,44 +313,28 @@
                         <li>
                             <h4>QUY TRÌNH VAY MUA XE TẢI TRẢ GÓP</h4>
                         </li>
-                        <li><strong><ins>Bước 1:</ins></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Similique, eos! Ipsam natus sint amet facilis architecto qui ab minima suscipit, earum
-                            provident.</li>
-                        <li><strong><ins>Bước 2:</ins></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Similique, eos! Ipsam natus sint amet facilis architecto qui ab minima suscipit, earum
-                            provident.</li>
-                        <li><strong><ins>Bước 3:</ins></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Similique, eos! Ipsam natus sint amet facilis architecto qui ab minima suscipit, earum
-                            provident.</li>
-                        <li><strong><ins>Bước 4:</ins></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Similique, eos! Ipsam natus sint amet facilis architecto qui ab minima suscipit, earum
-                            provident.</li>
-                        <li><strong><ins>Bước 5:</ins></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Similique, eos! Ipsam natus sint amet facilis architecto qui ab minima suscipit, earum
-                            provident.</li>
-                        <li><strong><ins>Bước 6:</ins></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Similique, eos! Ipsam natus sint amet facilis architecto qui ab minima suscipit, earum
-                            provident.</li>
-                        <li><strong><ins>Bước 7:</ins></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Similique, eos! Ipsam natus sint amet facilis architecto qui ab minima suscipit, earum
-                            provident.</li>
+                        <li><strong><ins>Bước 1:</ins></strong> Xem xe và quyết định chọn mua.</li>
+                        <li><strong><ins>Bước 2:</ins></strong> An Phước hỗ trợ liên hệ NH tư vấn và nộp hồ sơ vay vốn theo yêu cầu..</li>
+                        <li><strong><ins>Bước 3:</ins></strong> Ngân hàng thẩm định hồ sơ vay vốn. Nếu hồ sơ được duyệt cho vay thì ngân hàng sẽ ra thông báo cho vay. KH nộp thông báo cho vay và khoản tiền vốn tự có (20-30% giá trị xe) cho bên An Phước.</li>
+                        <li><strong><ins>Bước 4:</ins></strong> Xuất hoá đơn và gửi hồ sơ cho KH đi làm thủ tục nộp thuế trước bạ, bấm biển số, đăng kiểm xe…</li>
+                        <li><strong><ins>Bước 5:</ins></strong> Khi đã có giấy hẹn ngày lấy Carvet xe, KH lên ngân  hàng để ký hợp đồng tín dụng & hợp đồng bảo hiểm vật chất xe. Khi hoàn thành các bước trên, ngân hàng sẽ chuyển tiền cho An Phước và cấp cho khách hàng chứng nhận đi đường dùng thay Carvet xe.</li>
+                        <li><strong><ins>Bước 6:</ins></strong> Khi chúng tôi nhận được giải ngân số tiền còn lại từ ngân hàng, KH đến nhận xe về.</li>
+                        <li><strong><ins>Bước 7:</ins></strong> KH& Ngân hàng đi nhận Carvet xe bản gốc theo giấy hẹn.</li>
                     </ul>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="1349" height="495" src="https://www.youtube.com/embed/7oSOVY9Cl48"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <iframe width="1349" height="495" src="https://www.youtube.com/embed/7oSOVY9Cl48"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 25px;">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="1349" height="495" src="https://www.youtube.com/embed/7oSOVY9Cl48"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <iframe width="1349" height="495" src="https://www.youtube.com/embed/7oSOVY9Cl48"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p style="margin: 10px auto;"><strong>Xem ngay Video trải nghiệm Siam Truck</strong></p>
                     </div>
-                    <p>Xem ngay Video trải nghiệm Siam Truck</p>
-                </div>
             </div>
         </div>
     </section>
@@ -373,7 +343,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h3>THỜI GIAN KHUYẾN MÃI CÒN</h3>
+                    <h1 class="tTitleYellow">THỜI GIAN KHUYẾN MÃI CÒN</h1>
                     <div style="width: 100%; height: 90px"></div>
                 </div>
                 <div class="col-md-6 text-center">
