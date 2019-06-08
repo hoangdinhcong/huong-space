@@ -28,7 +28,6 @@ h1.tTitleYellow {
     font-size: 21.96px;
 }
 
-
 p.tParagraph {
     font-size: 13.52px;
 }
@@ -177,36 +176,35 @@ p.tParagraph {
     background: #fff;
 }
 
-#s7 .tAbilityBoxImage {
+#s7 .tAbilityBoxImage>img {
     margin: auto;
 }
 
 /* màn hình laptop trở lên */
 
-#s7 .tAbilityBox:first-child {
-    padding-right: 0;
-}
-
-#s7 .tAbilityBox:last-child {
-    padding-left: 0;
+@media (min-width: 992px) {
+    #s7 .tAbilityBox:first-child {
+        padding-right: 0;
+    }
+    #s7 .tAbilityBox:last-child {
+        padding-left: 0;
+    }
 }
 
 #s7 .tAbilityBoxMedia {
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-#s7 .tAbilityBoxMedia:first-child {
-    padding-right: 15px;
-}
-
-#s7 .tAbilityBoxMedia:last-child {
-    padding-left: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #s7 .tAbilityBoxMedia .media-object {
     height: 90px;
     width: auto;
+}
+
+#s7 .tAbilityBoxMedia .media-body {
+    font-size: 13.52px;
 }
 
 #s7 .tAbilityBoxMedia .media-body h4.media-heading {
@@ -247,6 +245,30 @@ p.tParagraph {
 
 #s11 .embed-responsive {
     border-radius: 15px;
+}
+
+#s12 {
+    background-color: #070a14;
+}
+
+.footer {
+    background-color: #e13d34;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer .tHotline {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 15.11px;
+    letter-spacing: .7px;
+    vertical-align: middle;
+    padding: 6px 0px;
+}
+
+.footer .tHotline>img {
+    width: 23px;
+    height: 23px;
 }
 
 .tInstallment {
