@@ -3,6 +3,9 @@ $(document).ready(function () {
     $("#ipPrepaid").keypress(NumberOnly);
     $("#ipTenor").keypress(NumberOnly);
     // $("#ipInterestRate").keypress(NumberOnly);
+
+    $("#btnCalculate").click(Calculate);
+
 });
 
 function Calculate() {
@@ -16,7 +19,7 @@ function Calculate() {
     var tra_goc = du_no_cuoi_ky / thoi_han_vay;
     var tong_tra_lai = 0;
     var tong_goc_lai = 0;
-    //debugger;
+    
     var html = '<table id="ket-qua-tinh-tien" class="table table-bordered table-hover table-striped">';
     html += '<thead>';
     html += '<tr class="tieu-de">';

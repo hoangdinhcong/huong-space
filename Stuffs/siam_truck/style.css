@@ -406,12 +406,21 @@ p.tParagraph {
 }
 
 #tResult {
-    margin-top: 25px;
+    margin-top: 15px;
     color: #070915;
 }
 
-#tResult table{
+#tResult>table{
     background-color: #fff;
+}
+
+#tResult>table tfoot{
+    font-weight: bold;
+}
+
+.table-bordered > tfoot > tr > td {
+    font-weight: bold;
+    border-top-width: 2px;
 }
 
 #tResult .note {
