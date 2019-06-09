@@ -288,25 +288,30 @@
                         <form id="tCalculator">
                             <div class="form-group col-md-6">
                                 <label for="ipPrice">Giá xe:</label>
-                                <input type="text" class="form-control" id="ipPrice" placeholder="Nhập giá xe VNĐ">
+                                <input type="text" class="form-control" id="ipPrice" onkeyup="FormatNumber(this)"
+                                    placeholder="Nhập giá xe (VNĐ)">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="ipPrice">Lãi suất (% tháng):</label>
-                                <input type="text" class="form-control" id="ipInterestRate" placeholder="1.25">
+                                <input type="text" class="form-control" id="ipInterestRate" placeholder="0.8">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="ipPrice">Số tiền trả trước (VNĐ):</label>
-                                <input type="number" class="form-control" id="ipPrepaid"
+                                <input type="text" class="form-control" id="ipPrepaid" onkeyup="FormatNumber(this)"
                                     placeholder="Số tiền trả trước (VNĐ) tối thiểu 30% giá xe">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="ipPrice">Thời hạn vay:</label>
-                                <input type="number" class="form-control" id="ipTenor" placeholder="Chọn thời hạn vay">
+                                <input type="number" class="form-control" id="ipTenor" value="12"
+                                    placeholder="Chọn thời hạn vay">
                             </div>
                             <div class="col-md-12 text-center">
-                                <button type="button" class="btn btn-light-red">TÍNH TIỀN</button>
+                                <button type="button" class="btn btn-light-red" onclick="Calculate()">TÍNH TIỀN</button>
                             </div>
                         </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="tResult"></div>
                     </div>
                 </div>
             </div>
@@ -387,9 +392,11 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center tHotline"><img src="assets/hotline.png"> <span>HOTLINE: 0909 20 26 99</span></div>
+                <div class="col-md-4 text-center tHotline"><img src="assets/hotline.png"> <span>HOTLINE: 0909 20 26
+                        99</span></div>
                 <div class="col-md-8 text-center">
-                    <span>Công Ty Ô tô An Phước - Đại lộ Bình Dương (QL13),<br> Khu phố Bình Đức 2, Phường Bình Hòa, Thị xã
+                    <span>Công Ty Ô tô An Phước - Đại lộ Bình Dương (QL13),<br> Khu phố Bình Đức 2, Phường Bình Hòa, Thị
+                        xã
                         Thuận An, Tỉnh Bình Dương</span>
                 </div>
             </div>
@@ -400,5 +407,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
     integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
     crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
 </html>

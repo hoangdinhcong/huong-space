@@ -404,3 +404,16 @@ p.tParagraph {
     height: 2px;
     background-image: linear-gradient(to right, transparent, #ff0000, transparent);
 }
+
+#tResult {
+    margin-top: 25px;
+    color: #070915;
+}
+
+#tResult table{
+    background-color: #fff;
+}
+
+#tResult .note {
+    color:#fff;
+}
