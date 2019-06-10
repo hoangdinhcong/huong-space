@@ -3,15 +3,27 @@
 $errors = [];
 $message = '';
 if ($_POST) {
-    if (!$_POST['hovaten']) {
-        $errors['hovaten'] = 'OK';
+    if (!$_POST['fullname']) {
+        $errors['fullname'] = 'Vui lòng nhập họ và tên';
+    }
+    if (!$_POST['phone']) {
+        $errors['phone'] = 'Vui lòng nhập số điện thoại';
+    }
+    if (!$_POST['address']) {
+        $_POST['address'] = ' ';
+    }
+    if (!$_POST['email']) {
+        $errors['email'] = 'Vui lòng nhập email';
     }
 
     if (empty($errors)) {
         ksort($_POST);
         $values = array_values($_POST);
-        file_put_contents('./#contact.csv', implode(",", $values) . "\r\n", FILE_APPEND) or die("Unable to open file!");
-        $message = 'Xong cmnr';
+        foreach ($values as &$str) {
+            $str = str_replace(',', ';', $str);
+        }
+        file_put_contents('./#contact.csv', implode(",", $values) . "\r\n", FILE_APPEND) or die("Unable save data!");
+        $message = 'Quý khách vui lòng đợi trong 2 giờ, đội ngũ nhân viên chúng tôi sẽ liên lạc lại để tư vấn và hỗ trợ quý khách hàng tốt nhất!';
     }
 }
 
@@ -44,7 +56,7 @@ if ($_POST) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> -->
-                <a class="navbar-brand" href="/"><img src="/assets/logo.png" alt="Siam Truck">
+                <a class="navbar-brand" href="/"><img src="assets/logo.png" alt="Siam Truck">
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -67,20 +79,28 @@ if ($_POST) {
                             <div><?php echo $message; ?></div>
                         <?php endif; ?>
                         <div class="form-group">
-
-                            <input type="text" class="form-control" name="hovaten" placeholder="Họ và tên*" required>
-                            <?php if (!empty($errors['hovaten'])): ?>
-                           <?php echo $errors['hovaten'] ?>
-<?php endif; ?>
+                            <input type="text" class="form-control" name="fullname" placeholder="Họ và tên*" required>
+                            <?php if (!empty($errors['fullname'])): ?>
+                            <span class="help-block text-danger "><?php echo $errors['fullname'] ?></span>
+                            <?php endif; ?>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="phone" placeholder="Số điện thoại*">
+                            <input type="text" class="form-control" name="phone" placeholder="Số điện thoại*" required>
+                            <?php if (!empty($errors['phone'])): ?>
+                            <span class="help-block text-danger "><?php echo $errors['phone'] ?></span>
+                            <?php endif; ?>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="diachi" placeholder="Địa chỉ*">
+                            <input type="text" class="form-control" name="address" placeholder="Địa chỉ">
+                            <?php if (!empty($errors['address'])): ?>
+                            <span class="help-block text-danger "><?php echo $errors['address'] ?></span>
+                            <?php endif; ?>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Email">
+                            <input type="email" class="form-control" name="email" placeholder="Email*" required>
+                            <?php if (!empty($errors['email'])): ?>
+                            <span class="help-block text-danger "><?php echo $errors['email'] ?></span>
+                            <?php endif; ?>
                         </div>
                         <button type="submit" class="btn btn-default btn-golden">ĐĂNG KÝ NGAY</button>
                     </form>
@@ -99,7 +119,7 @@ if ($_POST) {
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 tPromoBox text-center">
+                <div class="col-md-4 col-sm-4 tPromoBox text-center">
                     <img src="assets/promo1.jpg" class="img-responsive tPromoBoxImage" alt="Image">
                     <div class="tPromoBoxTitle">
                         <h4 class="text-uppercase">Xe tải thái lan <br /> đầu tiên việt nam</h4>
@@ -109,7 +129,7 @@ if ($_POST) {
                             trang bị nhiều tiện ích hiện đại.</p>
                     </div>
                 </div>
-                <div class="col-md-4 tPromoBox text-center">
+                <div class="col-md-4 col-sm-4 tPromoBox text-center">
                     <img src="assets/promo2.jpg" class="img-responsive tPromoBoxImage" alt="Image">
                     <div class="tPromoBoxTitle">
                         <h4 class="text-uppercase">Mức giá cả phải chăng</h4>
@@ -119,7 +139,7 @@ if ($_POST) {
                             hợp với người tiêu dùng Việt Nam trong phân khúc xe tải nhẹ.</p>
                     </div>
                 </div>
-                <div class="col-md-4 tPromoBox text-center">
+                <div class="col-md-4 col-sm-4 tPromoBox text-center">
                     <img src="assets/promo3.jpg" class="img-responsive tPromoBoxImage" alt="Image">
                     <div class="tPromoBoxTitle">
                         <h4 class="text-uppercase">Nội thất sang trọng</h4>
@@ -377,14 +397,7 @@ if ($_POST) {
                 </div>
                 <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 25px;">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe width="1349" height="495" src="https://www.youtube.com/embed/7oSOVY9Cl48"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                        <iframe width="1349" height="495" src="https://www.youtube.com/embed/7oSOVY9Cl48"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                    <iframe width="1903" height="778" src="https://www.youtube.com/embed/wpnb2mXHPyo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <p style="margin: 10px auto;"><strong>Xem ngay Video trải nghiệm Siam Truck</strong></p>
                 </div>
@@ -397,14 +410,14 @@ if ($_POST) {
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1 class="tTitleYellow">THỜI GIAN KHUYẾN MÃI CÒN</h1>
-                    <div class="counting-container" data-end="2019-07-10T10:00:00">
+                    <div class="counting-container" data-end="2019-07-10T23:59:59">
                         <div class="counting">
                             <div class="counting-numbers">
                                 <div class="counting-digit day1">0</div>
                                 <div class="counting-digit day2">0</div>
                                 <div class="counting-haicham">:</div>
                             </div>
-                            <div class="counting-unit">Ngay</div>
+                            <div class="counting-unit">Ngày</div>
                         </div>
                         <div class="counting">
                             <div class="counting-numbers">
@@ -412,7 +425,7 @@ if ($_POST) {
                                 <div class="counting-digit hour2">0</div>
                                 <div class="counting-haicham">:</div>
                             </div>
-                            <div class="counting-unit">Gio</div>
+                            <div class="counting-unit">Giờ</div>
                         </div>
 
                         <div class="counting">
@@ -421,7 +434,7 @@ if ($_POST) {
                                 <div class="counting-digit min2">0</div>
                                 <div class="counting-haicham">:</div>
                             </div>
-                            <div class="counting-unit">Phut</div>
+                            <div class="counting-unit">Phút</div>
                         </div>
 
                         <div class="counting">
@@ -431,12 +444,12 @@ if ($_POST) {
 
                                 <div class="counting-haicham" style="opacity: 0;">:</div>
                             </div>
-                            <div class="counting-unit">Ngay</div>
+                            <div class="counting-unit">Giây</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 text-center">
-                    <p>
+                <div class="col-md-6 col-sm-6 text-center" style="margin-bottom:25px;">
+                    <p style="margin-bottom:25px;">
                         <span style="font-size: 24.9px; font-weight: bold;">CHỈ DUY NHẤT HÔM NAY,</span>
                         <br>
                         <span style="font-size: 21.96px;">Sở hữu ô tô Siam Truck</span>
@@ -445,11 +458,11 @@ if ($_POST) {
                             style="font-size: 21.96px; color: #f0e221;">ƯU
                             ĐÃI</span>
                         <br>
-                        <button type="button" class="btn btn-golden" style="font-size: 12.71px; margin: 25px auto;">GỌI
-                            NGAY ĐỂ ĐƯỢC HỖ TRỢ</button>
                     </p>
+                    <button type="button" class="btn btn-golden" style="font-size: 12.71px; margin: auto;">GỌI
+                            NGAY ĐỂ ĐƯỢC HỖ TRỢ</button>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 col-sm-6 text-center" style="margin-bottom:25px;">
                     <img src="assets/qr.jpg" class="img-responsive" alt="Image"
                         style="display: inline-block; margin-right: 10px; vertical-align: top;">
                     <div style="display: inline-block; width: 160px;">
@@ -464,9 +477,9 @@ if ($_POST) {
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center tHotline"><img src="assets/hotline.png"> <span>HOTLINE: 0909 20 26
+                <div class="col-md-5 text-center tHotline"><img src="assets/hotline.png"> <span>HOTLINE: 0909 20 26
                         99</span></div>
-                <div class="col-md-8 text-center">
+                <div class="col-md-7 text-center">
                     <span>Công Ty Ô tô An Phước - Đại lộ Bình Dương (QL13),<br> Khu phố Bình Đức 2, Phường Bình Hòa, Thị
                         xã
                         Thuận An, Tỉnh Bình Dương</span>

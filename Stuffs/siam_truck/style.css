@@ -127,8 +127,20 @@ p.tParagraph {
 
 #s1 {
     background: no-repeat url("assets/s1-bg.jpg") top;
-    background-size: 100%;
     min-height: 200vh;
+}
+
+/* màn hình laptop trở lên */
+@media (min-width: 992px) {
+    #s7 .tAbilityBox:first-child {
+        padding-right: 0;
+    }
+    #s7 .tAbilityBox:last-child {
+        padding-left: 0;
+    }
+    #s1 {
+        background-size: 100%;
+    }
 }
 
 #s1 #tRegisterForm {
@@ -180,16 +192,6 @@ p.tParagraph {
     margin: auto;
 }
 
-/* màn hình laptop trở lên */
-
-@media (min-width: 992px) {
-    #s7 .tAbilityBox:first-child {
-        padding-right: 0;
-    }
-    #s7 .tAbilityBox:last-child {
-        padding-left: 0;
-    }
-}
 
 #s7 .tAbilityBoxMedia {
     margin-top: 40px;
@@ -437,15 +439,16 @@ p.tParagraph {
 
 .counting-digit {
     border: solid 1px #fff;
-    border-radius: 3px;
-    font-size: 64px;
+    border-radius: 5px;
+    font-size: 68.82px;
     font-weight: bold;
-    line-height: 64px;
-    padding: 10px;
+    line-height: 68.82px;
+    padding: 12px 15px;
     margin: 6px 2px;
 }
 .counting-haicham {
-    font-size: 64px;
+    font-size: 42.98px;
+    line-height: 99px;
     font-weight: bold;
 }
 .counting-numbers {
@@ -453,5 +456,6 @@ p.tParagraph {
     flex-direction: row;
 }
 .counting-unit {
+    font-size: 14.23px;
     margin-right: 23px;
 }
