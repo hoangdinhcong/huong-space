@@ -6,6 +6,45 @@ $(document).ready(function () {
 
     $("#btnCalculate").click(Calculate);
 
+
+
+
+    (function () {
+        var dateEnd = $('.counting-container').attr('data-end');
+        var dDate = new Date(dateEnd);
+        
+        var reRender = function () {
+            var current = Date.now();
+            var timing = Math.trunc((dDate.getTime() - current) / 1000);
+
+            var days = Math.trunc(timing / 86400);
+            timing = timing - days * 86400;
+
+            var hours = Math.trunc(timing / (60 * 60));
+            timing = timing - hours * 60 * 60;
+
+            var minutes = Math.trunc(timing / 60);
+            timing = timing - minutes * 60;
+
+            var seconds = timing;
+
+            $('.counting-digit.day1').text(Math.trunc(days / 10));
+            $('.counting-digit.day2').text(days % 10);
+
+            $('.counting-digit.hour1').text(Math.trunc(hours / 10));
+            $('.counting-digit.hour2').text(hours % 10);
+
+            $('.counting-digit.min1').text(Math.trunc(minutes / 10));
+            $('.counting-digit.min2').text(minutes % 10);
+
+            $('.counting-digit.sec1').text(Math.trunc(seconds / 10));
+            $('.counting-digit.sec2').text(seconds % 10);
+        }
+
+        setInterval(reRender, 1000);
+    })();
+
+
 });
 
 function Calculate() {
@@ -19,7 +58,7 @@ function Calculate() {
     var tra_goc = du_no_cuoi_ky / thoi_han_vay;
     var tong_tra_lai = 0;
     var tong_goc_lai = 0;
-    
+
     var html = '<table id="ket-qua-tinh-tien" class="table table-bordered table-hover table-striped">';
     html += '<thead>';
     html += '<tr class="tieu-de">';

@@ -1,3 +1,23 @@
+<?php
+
+$errors = [];
+$message = '';
+if ($_POST) {
+    if (!$_POST['hovaten']) {
+        $errors['hovaten'] = 'OK';
+    }
+
+    if (empty($errors)) {
+        ksort($_POST);
+        $values = array_values($_POST);
+        file_put_contents('./#contact.csv', implode(",", $values) . "\r\n", FILE_APPEND) or die("Unable to open file!");
+        $message = 'Xong cmnr';
+    }
+}
+
+?> 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,20 +62,27 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center">
-                    <form id="tRegisterForm">
+                    <form id="tRegisterForm" method="POST">
+                        <?php if ($message): ?>
+                            <div><?php echo $message; ?></div>
+                        <?php endif; ?>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="ipName" placeholder="Họ và tên*">
+
+                            <input type="text" class="form-control" name="hovaten" placeholder="Họ và tên*" required>
+                            <?php if (!empty($errors['hovaten'])): ?>
+                           <?php echo $errors['hovaten'] ?>
+<?php endif; ?>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="ipPhone" placeholder="Số điện thoại*">
+                            <input type="text" class="form-control" name="phone" placeholder="Số điện thoại*">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="ipAddress" placeholder="Địa chỉ*">
+                            <input type="text" class="form-control" name="diachi" placeholder="Địa chỉ*">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="ipEmail" placeholder="Email">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
                         </div>
-                        <button type="button" class="btn btn-default btn-golden">ĐĂNG KÝ NGAY</button>
+                        <button type="submit" class="btn btn-default btn-golden">ĐĂNG KÝ NGAY</button>
                     </form>
                 </div>
             </div>
