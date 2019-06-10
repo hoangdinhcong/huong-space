@@ -1,6 +1,5 @@
 body {
-    min-height: 2000px;
-    padding-top: 50px;
+    padding-top: 65px;
     background-color: #070915;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,10 +10,15 @@ h1, h2, h3, h4, h5, h6 {
     color: #ff0000;
     font-weight: bold;
 }
+.form-group {
+    margin-bottom: 10px;
+}
 
 .form-control {
     border: none;
     box-shadow: none;
+    height: 32px;
+    font-size: 12px;
 }
 
 h1.tTitle {
@@ -26,6 +30,7 @@ h1.tTitle {
 h1.tTitleYellow {
     color: #f0e221;
     font-size: 21.96px;
+    padding: 12px 0;
 }
 
 p.tParagraph {
@@ -38,7 +43,7 @@ p.tParagraph {
     -moz-border-radius: 5px;
     border-radius: 5px;
     font-size: 17px;
-    padding: 10px;
+    padding: 8px 10px;
     font-weight: bold;
     color: #17214C;
     letter-spacing: 1px;
@@ -122,16 +127,17 @@ p.tParagraph {
 
 #s1 {
     background: no-repeat url("assets/s1-bg.jpg") top;
-    background-size: cover;
+    background-size: 100%;
+    min-height: 200vh;
 }
 
 #s1 #tRegisterForm {
-    margin-top: 488px;
+    margin-top: 64vh;
     margin-bottom: 17px;
 }
 
 #s1 #tQuote {
-    margin-bottom: 712px;
+    /* margin-bottom: 712px; */
 }
 
 #s1 #tQuote>h1 {
@@ -145,12 +151,6 @@ p.tParagraph {
     color: #fff;
     padding: 10px;
     background-color: #e13d34;
-}
-
-#s3 h3 {
-    font-size: 27.06px;
-    color: #fff;
-    font-weight: bold;
 }
 
 #s4 {
@@ -424,4 +424,34 @@ p.tParagraph {
 
 #tResult .note {
     color:#fff;
+}
+
+
+
+.counting-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.counting-digit {
+    border: solid 1px #fff;
+    border-radius: 3px;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 64px;
+    padding: 10px;
+    margin: 6px 2px;
+}
+.counting-haicham {
+    font-size: 64px;
+    font-weight: bold;
+}
+.counting-numbers {
+    display: flex;
+    flex-direction: row;
+}
+.counting-unit {
+    margin-right: 23px;
 }
