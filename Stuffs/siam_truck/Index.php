@@ -22,7 +22,7 @@ if ($_POST) {
         foreach ($values as &$str) {
             $str = str_replace(',', ';', $str);
         }
-        file_put_contents('./#contact.csv', implode(",", $values) . "\r\n", FILE_APPEND) or die("Unable save data!");
+        file_put_contents('./siamdata/#contact.csv', implode(",", $values) . "\r\n", FILE_APPEND) or die("Unable save data!");
         $message = 'Quý khách vui lòng đợi trong 2 giờ, đội ngũ nhân viên chúng tôi sẽ liên lạc lại để tư vấn và hỗ trợ quý khách hàng tốt nhất!';
     }
 }
@@ -41,7 +41,9 @@ if ($_POST) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stylev4.css">
 </head>
 
 <body>
@@ -63,7 +65,7 @@ if ($_POST) {
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="tel:0909202699"><img src="assets/hotline.png"> <span>HOTLINE: 0909 20 26 99</span></a>
                     </li>
-                    <li><a href="#"><img src="assets/gmail.png"> <span>NHẬN TƯ VẤN NGAY</span></a></li>
+                    <li><a href="#tRegisterForm"><img src="assets/gmail.png"> <span>NHẬN TƯ VẤN NGAY</span></a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -75,9 +77,6 @@ if ($_POST) {
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <form id="tRegisterForm" method="POST">
-                        <?php if ($message): ?>
-                            <div><?php echo $message; ?></div>
-                        <?php endif; ?>
                         <div class="form-group">
                             <input type="text" class="form-control" name="fullname" placeholder="Họ và tên*" required>
                             <?php if (!empty($errors['fullname'])): ?>
@@ -341,22 +340,22 @@ if ($_POST) {
                 <div class="col-md-8 col-md-offset-2">
                     <div class="row">
                         <form id="tCalculator">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6 col-sm-6">
                                 <label for="ipPrice">Giá xe:</label>
                                 <input type="text" class="form-control" id="ipPrice" onkeyup="FormatNumber(this)"
                                     placeholder="Nhập giá xe (VNĐ)">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6 col-sm-6">
                                 <label for="ipPrice">Lãi suất (% tháng):</label>
                                 <input type="text" class="form-control" id="ipInterestRate" placeholder="0.8"
                                     value="0.8">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6 col-sm-6">
                                 <label for="ipPrice">Số tiền trả trước (VNĐ):</label>
                                 <input type="text" class="form-control" id="ipPrepaid" onkeyup="FormatNumber(this)"
                                     placeholder="Số tiền trả trước (VNĐ) tối thiểu 30% giá xe">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6 col-sm-6">
                                 <label for="ipPrice">Thời hạn vay:</label>
                                 <input type="text" class="form-control" id="ipTenor" onkeyup="FormatNumber(this)"
                                     value="12" placeholder="Chọn thời hạn vay">
@@ -367,7 +366,7 @@ if ($_POST) {
                         </form>
                     </div>
                     <div class="row">
-                        <div class="col-md-12" id="tResult"></div>
+                        <div class="col-md-12" id="tResult" style="overflow: scroll;"></div>
                     </div>
                 </div>
             </div>
@@ -459,12 +458,11 @@ if ($_POST) {
                             ĐÃI</span>
                         <br>
                     </p>
-                    <button type="button" class="btn btn-golden" style="font-size: 12.71px; margin: auto;">GỌI
-                            NGAY ĐỂ ĐƯỢC HỖ TRỢ</button>
+                    <button type="button" class="btn btn-golden" style="font-size: 12.71px; margin: auto;" onclick="window.location='tel:0909202699';">GỌI NGAY ĐỂ ĐƯỢC HỖ TRỢ</button>
                 </div>
                 <div class="col-md-6 col-sm-6 text-center" style="margin-bottom:25px;">
-                    <img src="assets/qr.jpg" class="img-responsive" alt="Image"
-                        style="display: inline-block; margin-right: 10px; vertical-align: top;">
+                    <img src="assets/qr.png" class="img-responsive" alt="Image"
+                        style="display: inline-block; margin-right: 10px; vertical-align: top; max-width: 153px; height:auto;">
                     <div style="display: inline-block; width: 160px;">
                         <img src="assets/qr-arrow.png" alt="Image" style="display: block; padding-top: 5px;">
                         <span style="font-size: 24.9px; padding: 2px;">Hoặc quét mã <br>QR Code</span>
@@ -487,11 +485,40 @@ if ($_POST) {
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="congratModal" role="dialog">
+    	<div class="modal-dialog">
+      		<div class="modal-content">
+	        	<div class="modal-body">
+			        <a class="tclose" data-dismiss="modal">×</a>
+	          		<div class="text-center" id="ec">
+                        <h1 class="text-uppercase">SIAM TRUCK cảm ơn sự quan tâm của Quý khách hàng tới dòng sản phẩm xe tải Thái Lan của chúng tôi!</h1>
+                        <div class="divider div-transparent" style="margin-top: 18px;margin-bottom: 18px;"></div>
+                        <span>Quý khách vui lòng đợi trong 2 giờ, đội ngũ nhân viên chúng tôi <br>sẽ liên lạc lại để tư vấn và hỗ trợ quý khách hàng tốt nhất! </span>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-default btn-golden" style="margin-bottom:25px;" onclick="window.location='tel:0909202699';">HOTLINE: 0909 20 26 99</button>
+                        <p style="font-style: italic;margin-bottom: 0px;">Mọi thông tin chi tiết vui lòng cập nhật trên trang:</p>
+                        <p><a href="http://www.facebook.com/siamtruckxetaithailan" id="fblink" style="">http://www.facebook.com/siamtruckxetaithailan</a></p>
+                    </div>
+	        	</div>
+      		</div>
+    	</div>
+  	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
     integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
     crossorigin="anonymous"></script>
 <script src="script.js"></script>
-
+<script>
+    $(document).ready(function () {
+        <?php
+            if ($message):
+                echo "$('#congratModal').modal('show');";
+                $message = '';
+            endif;
+        ?>
+    });
+</script>
 </html>

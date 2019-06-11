@@ -9,7 +9,7 @@
     }
 
     if($valid == 'Ok') { 
-        $file_path = '#contact.csv';
+        $file_path = 'siamdata/#contact.csv';
         $filename = 'siam_data.csv';
         header("Content-Type: application/octet-stream");
         header("Content-Transfer-Encoding: Binary");
