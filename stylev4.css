@@ -250,18 +250,24 @@ p.tParagraph {
     padding-bottom: 25px;
 }
 
-.footer .tHotline {
+.footer .tHotline a {
+    text-decoration: none;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 15.11px;
     letter-spacing: .7px;
     vertical-align: middle;
     padding: 6px 0px;
+    color: #fff;
 }
 
-.footer .tHotline>img {
+.footer .tHotline img {
     width: 23px;
     height: 23px;
+}
+
+.footer .gap {
+    min-height: 60px;
 }
 
 .tInstallment {
@@ -358,6 +364,7 @@ p.tParagraph {
     font-size: 19px;
     margin-top: 23px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .tQuestion h3 {
@@ -502,6 +509,32 @@ p.tParagraph {
 
 #bring {
     margin-top: 50vh;
+}
+
+.footer-fixed {
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    color: white;
+}
+
+.footer-fixed .btn-gardient {
+    background-color: #e13d34;
+    text-decoration: none;
+    padding-top: 8px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    padding-bottom: 8px;
+    display: block;
+    min-height: 50px;
+}
+
+.footer-fixed .btn-gardient span {
+    color: #fff;
+    vertical-align: middle;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    letter-spacing: .7px;
 }
 
 /* màn hình laptop trở lên */

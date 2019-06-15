@@ -12,9 +12,6 @@ if ($_POST) {
     if (!$_POST['address']) {
         $_POST['address'] = ' ';
     }
-    if (!$_POST['email']) {
-        $errors['email'] = 'Vui lòng nhập email';
-    }
 
     if (empty($errors)) {
         ksort($_POST);
@@ -42,7 +39,7 @@ if ($_POST) {
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="stylev4.css?v1.4">
+    <link rel="stylesheet" href="stylev4.css?v1.5">
 </head>
 
 <body>
@@ -62,7 +59,7 @@ if ($_POST) {
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="tel:0909202699"><img src="assetv4/hotline.png"> <span>HOTLINE: 0909 20 26 99</span></a>
+                    <li><a href="tel:18002077"><img src="assetv4/hotline.png"> <span>HOTLINE: 1800 2077</span></a>
                     </li>
                     <li><a href="#tRegisterForm"><img src="assetv4/gmail.png"> <span>NHẬN TƯ VẤN NGAY</span></a></li>
                 </ul>
@@ -95,7 +92,7 @@ if ($_POST) {
                             <?php endif; ?>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Email*" required>
+                            <input type="email" class="form-control" name="email" placeholder="Email">
                             <?php if (!empty($errors['email'])) : ?>
                                 <span class="help-block text-danger "><?php echo $errors['email'] ?></span>
                             <?php endif; ?>
@@ -169,7 +166,7 @@ if ($_POST) {
                             <h4 class="tFeatureBoxTitle">HỆ THỐNG GIẢI TRÍ HIỆN ĐẠI</h4>
                             <div class="gapSolid"></div>
                             <div class="tFeatureBoxContent">
-                                <p>Trang bị các cổng USB, CD, radio … nhằm mang đến cảm giác thoải mái nhất cho tài xế.
+                                <p>Trang bị các cổng USB, thẻ SD, Radio, sạc điện thoại không dây ... nhằm mang đến cảm giác thoải mái nhất cho tài xế.
                                 </p>
                             </div>
                         </div>
@@ -204,11 +201,10 @@ if ($_POST) {
                     <div class="tFeatureBox">
                         <div class="tFeatureBoxBody">
                             <img src="assetv4/feature4.png" alt="" class="img-responsive tFeatureBoxImage">
-                            <h4 class="tFeatureBoxTitle">HỆ THỐNG GIẢM SỐC</h4>
+                            <h4 class="tFeatureBoxTitle">HỆ THỐNG GIẢM XÓC</h4>
                             <div class="gapSolid"></div>
                             <div class="tFeatureBoxContent">
-                                <p>Sử dụng 6 lá nhíp đàn hồi giúp xe giảm xóc tốt, hoạt động ổn định trong nhiều điều
-                                    kiện vận tải.</p>
+                                <p>Sử dụng 6 lá nhíp đàn hồi và lo xo giảm xóc, giúp xe giảm xóc tốt, hoạt động ổn định trong nhiều điều kiện vận tải.</p>
                             </div>
                         </div>
                     </div>
@@ -247,7 +243,7 @@ if ($_POST) {
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <div class="tQuestion">
+                    <div class="tQuestion" onclick="window.location='tel:18002077';">
                         <p>Bạn chọn mua xe 1 đời hay dành cả đời để mua xe?</p>
                         <h3>LIÊN HỆ ĐỂ ĐƯỢC TƯ VẤN</h3>
                     </div>
@@ -484,7 +480,7 @@ if ($_POST) {
                             ĐÃI</span>
                         <br>
                     </p>
-                    <button type="button" class="btn btn-golden" style="font-size: 12.71px; margin: auto;" onclick="window.location='tel:0909202699';">GỌI NGAY ĐỂ ĐƯỢC HỖ TRỢ</button>
+                    <button type="button" class="btn btn-golden" style="font-size: 12.71px; margin: auto;" onclick="window.location='tel:18002077';">GỌI NGAY ĐỂ ĐƯỢC HỖ TRỢ</button>
                 </div>
                 <div class="col-md-6 col-sm-6 text-center" style="margin-bottom:25px;">
                     <img src="assetv4/qr.png" class="img-responsive" alt="Image" style="display: inline-block; margin-right: 10px; vertical-align: top; max-width: 153px; height:auto;">
@@ -500,12 +496,25 @@ if ($_POST) {
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 text-center tHotline"><img src="assetv4/hotline.png"> <span>HOTLINE: 0909 20 26
-                        99</span></div>
+                <div class="col-md-5 text-center tHotline"><a href="tel:18002077"><img src="assetv4/hotline.png"> <span>HOTLINE: 1800 2077</span></a></div>
                 <div class="col-md-7 text-center">
                     <span>Công Ty Ô tô An Phước - Đại lộ Bình Dương (QL13),<br> Khu phố Bình Đức 2, Phường Bình Hòa, Thị
                         xã
                         Thuận An, Tỉnh Bình Dương</span>
+                </div>
+            </div>
+            <div class="row gap visible-xs visible-sm"></div>
+        </div>
+    </footer>
+
+    <footer class="footer-fixed visible-sm visible-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center" style="padding-right: 7px;">
+                    <a class="btn-gardient" href="tel:18002077"><img src="assetv4/hotline.png"> <span>HOTLINE: 1800 2077</span></a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-center" style="padding-left: 7px;">
+                    <a class="btn-gardient" href="#tRegisterForm"><img src="assetv4/gmail.png"> <span>NHẬN TƯ VẤN NGAY</span></a>
                 </div>
             </div>
         </div>
@@ -519,10 +528,10 @@ if ($_POST) {
                     <div class="text-center" id="ec">
                         <h1 class="text-uppercase">SIAM TRUCK cảm ơn sự quan tâm của Quý khách hàng tới dòng sản phẩm xe tải Thái Lan của chúng tôi!</h1>
                         <div class="divider div-transparent" style="margin-top: 18px;margin-bottom: 18px;"></div>
-                        <span>Quý khách vui lòng đợi trong 2 giờ, đội ngũ nhân viên chúng tôi <br>sẽ liên lạc lại để tư vấn và hỗ trợ quý khách hàng tốt nhất! </span>
+                        <span>Quý khách vui lòng đợi trong 60 phút, đội ngũ nhân viên chúng tôi <br>sẽ liên lạc lại để tư vấn và hỗ trợ quý khách hàng tốt nhất! </span>
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-default btn-golden" style="margin-bottom:25px;" onclick="window.location='tel:0909202699';">HOTLINE: 0909 20 26 99</button>
+                        <button class="btn btn-default btn-golden" style="margin-bottom:25px;" onclick="window.location='tel:18002077';">HOTLINE: 1800 2077</button>
                         <p style="font-style: italic;margin-bottom: 0px;">Mọi thông tin chi tiết vui lòng cập nhật trên trang:</p>
                         <p><a href="http://www.facebook.com/siamtruckxetaithailan" id="fblink" style="">http://www.facebook.com/siamtruckxetaithailan</a></p>
                     </div>
