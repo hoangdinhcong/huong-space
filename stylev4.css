@@ -283,21 +283,39 @@ p.tParagraph {
     border-radius: 5px;
 }
 
-.tInstallmentProcess li {
+.tInstallmentProcess>li {
     position: relative;
     list-style-type: none;
     padding-top: 2px;
+    padding-bottom: 5px;
 }
 
-.tInstallmentProcess li:not(:first-child):before {
+.tInstallmentProcess>li:before {
     content: "";
     position: absolute;
-    top: 3px;
-    left: -20px;
-    width: 13px;
-    height: 13px;
-    background-image: url(assetv4/wheel.png);
+    top: 13px;
+    left: -22px;
+    width: 15px;
+    height: 16px;
+    background-image: url(assetv4/wheel.png?v1);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
+
+.tInstallmentProcess .tInstallmentProcessSub {
+    padding-left: 15px;
+}
+
+.tInstallmentProcess .tInstallmentProcessSub {
+    list-style-type: decimal;
+}
+
+.tInstallmentProcess .tInstallmentProcessSub>li {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+}
+
 
 /* Promo box */
 

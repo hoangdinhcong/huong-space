@@ -39,7 +39,7 @@ if ($_POST) {
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="stylev4.css?v1.5">
+    <link rel="stylesheet" href="stylev4.css?v1.6">
 </head>
 
 <body>
@@ -54,7 +54,7 @@ if ($_POST) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> -->
-                <a class="navbar-brand" href="/"><img src="assetv4/logo.png" alt="Siam Truck">
+                <a class="navbar-brand" href="/"><img src="assetv4/logo.png?v1" alt="Siam Truck">
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -135,7 +135,7 @@ if ($_POST) {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 tPromoBox text-center">
-                    <img src="assetv4/promo3.jpg" class="img-responsive tPromoBoxImage" alt="Image">
+                    <img src="assetv4/furniture.jpg" class="img-responsive tPromoBoxImage" alt="Image">
                     <div class="tPromoBoxTitle">
                         <h4 class="text-uppercase">Nội thất sang trọng</h4>
                     </div>
@@ -398,8 +398,34 @@ if ($_POST) {
                     <ul class="tInstallmentProcess">
                         <li>
                             <h4>QUY TRÌNH VAY MUA XE TẢI TRẢ GÓP</h4>
+                            <ul class="tInstallmentProcessSub" style="list-style: none;padding-left: 0;">
+                                <li>THỦ TỤC MUA XE TRẢ GÓP NHANH GỌN, ĐƠN GIẢN</li>
+                                <li>‘’CHÌA KHÓA TRAO TAY, GIAO XE TẬN NHÀ’’</li>
+                                <li>CHỈ CẦN TRẢ TRƯỚC 10-30%, THỜI GIAN 01-05 NĂM ( TÙY CHỌN)</li>
+                            </ul>
                         </li>
-                        <li><strong><ins>Bước 1:</ins></strong> Xem xe và quyết định chọn mua.</li>
+                        <li>
+                            <h4><ins>I. ĐỐI VỚI CÔNG TY HOẶC DOANH NGHIỆP</ins></h4>
+                            <ul class="tInstallmentProcessSub">
+                                <li>CMND của Giám đốc: 01 bản photo</li>
+                                <li>Giấy phép kinh doanh: 01 bản photo</li>
+                                <li>Đăng ký mẫu dấu: 01 bản photo</li>
+                                <li>Tờ khai báo cáo thuế hoặc báo cáo tài chính của 6 tháng gần nhất: 01 bản photo</li>
+                                <li>Biên bản họp hội đồng thành viên/HĐQT (Nếu công ty 02 thành viên trở lên): 01 bản chính</li>
+                                <li>CMND của các thành viên góp vốn: 01 bản photo</li>
+                                <li>Điều lệ Công ty: 01 bản photo </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4><ins>II. ĐỐI VỚI CÁ NHÂN</ins></h4>
+                            <ul class="tInstallmentProcessSub">
+                                <li>Chứng minh nhân dân: 01 bản photo</li>
+                                <li>Hộ khẩu: 01 bản photo</li>
+                                <li>Giấy kết hôn 01 bản photo (nếu có) hoặc giấy độc thân 01 bản photo (nếu có)</li>
+                                <li>Bằng lái xe (nếu có): 01 bản photo</li>
+                            </ul>
+                        </li>
+                        <!-- <li><strong><ins>Bước 1:</ins></strong> Xem xe và quyết định chọn mua.</li>
                         <li><strong><ins>Bước 2:</ins></strong> An Phước hỗ trợ liên hệ NH tư vấn và nộp hồ sơ vay vốn
                             theo yêu cầu..</li>
                         <li><strong><ins>Bước 3:</ins></strong> Ngân hàng thẩm định hồ sơ vay vốn. Nếu hồ sơ được duyệt
@@ -414,7 +440,7 @@ if ($_POST) {
                         <li><strong><ins>Bước 6:</ins></strong> Khi chúng tôi nhận được giải ngân số tiền còn lại từ
                             ngân hàng, KH đến nhận xe về.</li>
                         <li><strong><ins>Bước 7:</ins></strong> KH& Ngân hàng đi nhận Carvet xe bản gốc theo giấy hẹn.
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="col-md-6 col-md-offset-3 text-center" style="margin-top: 25px;">
